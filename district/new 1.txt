@@ -1,0 +1,7 @@
+\COPY district_karnataka FROM 'C:/xampp/htdocs/nictemp/district_karnataka.csv' DELIMITER ',' CSV HEADER encoding 'utf-8';
+
+\COPY district_karnataka FROM 'C:/xampp/htdocs/nictemp/district_karnataka.txt' DELIMITER ',' TXT HEADER;
+
+\COPY district_karnataka FROM 'C:/xampp/htdocs/nictemp/district_karnataka.csv' DELIMITER ',' CSV HEADER encoding 'windows-1251';
+
+\COPY district_karnataka FROM 'C:/xampp/htdocs/nictemp/district.csv' DELIMITER ',' CSV HEADER encoding 'utf-8';

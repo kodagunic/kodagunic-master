@@ -1,0 +1,13 @@
+RewriteEngine on
+
+RewriteRule ^index index.php [NC,L]
+
+RewriteRule ^application application.php [NC,L]
+
+RewriteRule ^dupack dupack.php [NC,L]
+
+RewriteRule ^challanupload challanupload.php [NC,L]
+
+RewriteRule ^applstat applstat.php [NC,L]
+
+RewriteRule ^help help.php [NC,L]
