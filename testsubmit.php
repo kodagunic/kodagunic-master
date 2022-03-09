@@ -19,6 +19,10 @@ session_start();
                     echo 'document.getElementById("captcha").focus();';
                     echo '</script>';
             }
+
+
+          
+
             else{
        
             $name = $_POST['testname'];

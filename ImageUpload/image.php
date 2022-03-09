@@ -1,4 +1,5 @@
 <?php
+
 $uploaddir = '/Users/postgres/';
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 $name = $_POST['name'];
@@ -25,4 +26,5 @@ else
     unlink($uploadfile);
 }
 pg_close($conn);
+
 ?>
