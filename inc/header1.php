@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-	define("SITEPATH", 'https://localhost/kodagunic-master/');
+	define("SITEPATH", 'http://localhost/kodagunic-master/');
 	//define("SITEPATH", 'https://10.171.154.72/nictemp/');
 ?> 
 <head>

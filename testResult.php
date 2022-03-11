@@ -1,9 +1,14 @@
 <?php
+ob_start();
 session_start();
 include "inc/header1.php";
 include "inc/nav1.php";
 include "inc/conn.php";
-
+if(isset($_SESSION['transaction'])&& $_SESSION['transaction']=="No")
+{
+    header("location:index.php"); 
+}
+else{
 $id=$_SESSION['_id'];
 $name=$_SESSION['_name'];
 $mobile=$_SESSION['_mobile'];
@@ -34,7 +39,6 @@ $temp = '/Users/postgres/tmp.jpg';
                                         {
                                             while ($line = pg_fetch_array($result))
                                             {
-                                                $ctobj = $line["image"];
                                                 echo "<IMG SRC=ImageUpload/show.php width='120' height='120'>";
                                             
                                             }
@@ -71,7 +75,7 @@ $temp = '/Users/postgres/tmp.jpg';
 
                     <?php
                     }
-        
+                }
              ?>
              <?php 
              

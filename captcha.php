@@ -70,7 +70,8 @@ imagefilledellipse(
 }
 
 /* Generate random lines in background of the captcha image */
-for( $count=0; $count<$random_captcha_lines; $count++ ) {
+for( $count=0; $count<$random_captcha_lines; $count++ ) 
+{
 imageline(
 	$captcha_image,
 	mt_rand(0,$captcha_image_width),

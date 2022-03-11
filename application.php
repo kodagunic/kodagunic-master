@@ -20,7 +20,7 @@
         </div>
         <div>
             <h3>Application for the post of Village Accountant</h3>
-            <form method="post" action="" name="VAappForm">
+            <form method="post" action="appSubmit.php" name="appForm">
                 <table class="table table-hover">
                     <tbody>
                         <tr>
@@ -105,50 +105,51 @@
                                 Applied category /ಕೋರಿರುವ ವರ್ಗ*
                             </td>
                             <td>
+
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="GM">
+                                    <input class="form-check-input" type="radio" name="appliedCategory" id="flexRadioDefault1" value="GM">
                                     <label class="form-check-label" for="flexRadioDefault1">
                                         GM/ಸಾ.ಅ	
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="SC">
+                                    <input class="form-check-input" type="radio" name="appliedCategory" id="flexRadioDefault2" value="SC">
                                     <label class="form-check-label" for="flexRadioDefault2">
                                         SC/ಪ.ಜಾ
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="ST">
+                                    <input class="form-check-input" type="radio" name="appliedCategory" id="flexRadioDefault3" value="ST">
                                     <label class="form-check-label" for="flexRadioDefault3">
                                         ST/ಪ.ಪಂ
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" value="CAT">
+                                    <input class="form-check-input" type="radio" name="appliedCategory" id="flexRadioDefault4" value="CAT">
                                     <label class="form-check-label" for="flexRadioDefault4">
                                         Cat-1/ಪ್ರವಗ೯-1
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" value="2A">
+                                    <input class="form-check-input" type="radio" name="appliedCategory" id="flexRadioDefault5" value="2A">
                                     <label class="form-check-label" for="flexRadioDefault5">
                                         2A/2ಎ
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6" value="2B">
+                                    <input class="form-check-input" type="radio" name="appliedCategory" id="flexRadioDefault6" value="2B">
                                     <label class="form-check-label" for="flexRadioDefault6">
                                         2B/2ಬಿ
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault7" value="3A">
+                                    <input class="form-check-input" type="radio" name="appliedCategory" id="flexRadioDefault7" value="3A">
                                     <label class="form-check-label" for="flexRadioDefault7">
                                         3A/3ಎ
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault8" value="3B">
+                                    <input class="form-check-input" type="radio" name="appliedCategory" id="flexRadioDefault8" value="3B">
                                     <label class="form-check-label" for="flexRadioDefault8">
                                         3B/3ಬಿ
                                     </label>
@@ -402,7 +403,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <button type="submit" class="btn btn-primary">PREVIEW</button>
+                <button type="submit" name="appSub"class="btn btn-primary">PREVIEW</button>
                 <button type="reset" class="btn btn-danger">CANCEL</button>                
             </form>
         </div>

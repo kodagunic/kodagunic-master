@@ -2,17 +2,19 @@
 ob_start();
 session_start();
 // //echo $_SESSION['transaction'];
-// if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ) {        
-//     header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
-//     die( header( 'location: test.php' ) );
-// }
+if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ) {        
+    header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
+    die( header( 'location: test.php' ) );
+}
 
 include "inc/header1.php";
 include "inc/nav1.php";
 include "inc/conn.php";
+include "platformDetails.php";
 
 function uploadImage($id_,$name_,$mobile_,$email_,$district_)
 {
+
 $id=$id_;
 $img_name=$id_;
 $name=$name_;
@@ -21,7 +23,19 @@ $email=$email_;
 $district=$district_;
 $img_name=$id;
 
-$uploaddir = '/Users/postgres/';
+$platform=get_operating_system();
+echo $platform;
+if($platform=="Mac")
+{
+    echo "Platform --: Mac Os ";
+    $uploaddir = '/Users/postgres/';
+    
+}
+else if($platform=="Windows")
+{
+    echo "windows";
+}
+else{echo "Platform error";}
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
 if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile))
@@ -100,6 +114,7 @@ if(isset($_POST['testsubmit']))
                         echo $email." already in DB";
                     } 
                     else {
+
                         uploadImage($id,$name,$mobile,$email,$district);
                         $_SESSION['_id']=$id;
                         $_SESSION['_name']=$name;
@@ -237,8 +252,32 @@ function refreshCaptcha(){
 		)+"?rand="+Math.random()*1000;
 }
 var loadFile = function(event) {
-	var image = document.getElementById('output');
-	image.src = URL.createObjectURL(event.target.files[0]);
+
+    const fi = document.getElementById('imgfile');
+        // Check if any file is selected.
+        if (fi.files.length > 0) {
+            for (const i = 0; i <= fi.files.length - 1; i++) {
+  
+                const fsize = fi.files.item(i).size;
+                const file = Math.round((fsize / 1024));
+                // The size of the file.
+                if (file >= 1024) {
+                    alert(
+                      "Please select a photo less than 1mb");
+                      document.getElementById('imgfile').value= null;
+                    } 
+                else {
+                    var image = document.getElementById('output');
+	                image.src = URL.createObjectURL(event.target.files[0]);
+                    // document.getElementById('size').innerHTML = '<b>'
+                    // + file + '</b> KB';
+                }
+            }
+        }
+
+
+
+	
 };
 </script>
 <?php include "inc/script1.php"; ?>
